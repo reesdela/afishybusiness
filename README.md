@@ -1,3 +1,3 @@
 # afishybusiness
 
-site is currently unavailable due to a site migration
+site is currently offline while work is done through development environment
