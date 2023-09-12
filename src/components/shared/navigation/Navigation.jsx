@@ -1,11 +1,12 @@
+import './Navigation.css'
+import Logo from '../../../assets/fishy.svg'
 
 const Navigation = () => {
 
     return (
         <div>
             <div className="header">
-                <img id="logo" src="../../assets/fishy.svg" />
-                <br></br>
+                <img id="logo" src={Logo} />
             </div>
             <div className="navigation">
                 <span>HOME</span>

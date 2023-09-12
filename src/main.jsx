@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './components/shared/header/Header'
+import AFishyBusiness from './AFishyBusiness'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
+    <AFishyBusiness />
   </React.StrictMode>,
 )
