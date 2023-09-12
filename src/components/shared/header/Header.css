@@ -1,0 +1,36 @@
+@media only screen and (min-width: 480px) {
+    * {
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0px;
+    }
+    
+    #testingshit {
+        background: white;
+    }
+    
+    #body_top {
+        width: 1000px;
+        margin: auto;
+    }
+    
+    .top_of_page {
+        width: 100%;
+        background: #f0f0f0;
+    }
+    
+    .top_of_page_info {
+        width: 1000px;
+        margin: auto;
+        text-align: end;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .top_of_page_info a {
+        font-weight: 700;
+        color: #4f4f4f;
+        text-decoration: none;
+        padding-left: 1.5rem;
+    }
+}
