@@ -5,26 +5,37 @@ const Navigation = () => {
 
     return (
         <div>
-            <div className="header">
+            <div className="imgLogo">
                 <img id="logo" src={Logo} />
             </div>
-            <div className="navigation">
-                <span>HOME</span>
-                <span>|</span>
-                <span><a href="./subpages/ceramic_fish.php">CERAMIC FISH ART</a></span>
-                <span>|</span>
-                <span>CUSTOM ORDER</span>
-                <span>|</span>
-                <span>SALE</span>
-                <span>|</span>
-                <span>SHIPPING</span>
-                <span>|</span>
-                <span>ABOUT US</span>
-                <span>|</span>
-                <span>FAQ</span>
-                <span>|</span>
-                <span><a href="./subpages/contact_us/contact_us.php">CONTACT US</a></span>
-            </div>
+            <nav className="nav-main">
+                <ul className="nav-list-main">
+                    <li className="nav-list-item">
+                        <a href="">HOME</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">CERAMIC FISH ART</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">CUSTOM ORDER</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">SALE</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">SHIPPING</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">ABOUT US</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">FAQ</a>
+                    </li>
+                    <li className="nav-list-item">
+                        <a href="">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     )
 }
