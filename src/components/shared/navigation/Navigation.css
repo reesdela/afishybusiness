@@ -15,6 +15,11 @@
         position: relative;
     }
 
+    .nav-list-seperator {
+        color: white;
+        text-decoration: none; 
+    }
+
 
     .nav-list-item a {
         color: white;
