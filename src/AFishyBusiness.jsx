@@ -1,5 +1,6 @@
 import Header from './components/shared/header/Header';
 import Navigation from './components/shared/navigation/Navigation';
+import Slider from './components/slider-home/Slider';
 
 const AFishyBusiness = () => {
 
@@ -7,6 +8,7 @@ const AFishyBusiness = () => {
         <div>
             <Header />
             <Navigation />
+            <Slider />
         </div>
     )
 }
