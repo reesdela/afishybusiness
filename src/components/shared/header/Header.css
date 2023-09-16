@@ -8,6 +8,7 @@
 .header {
     width: 100%;
     background: #f0f0f0;
+    height: 38px;
 }
 
 .header-nav {
@@ -17,6 +18,7 @@
 
 .header-user {
     float: right;
+    list-style: none;
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;

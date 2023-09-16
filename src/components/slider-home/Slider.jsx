@@ -1,8 +1,8 @@
-import './Slider.css'
 import fishImg1 from '../../assets/fish_img1.jpg'
 import fishImg2 from '../../assets/fish_img2.jpg'
 import fishImg3 from '../../assets/fish_img4.png'
 import { useEffect } from 'react'
+import './Slider.css'
 
 const Slider = () => {
 

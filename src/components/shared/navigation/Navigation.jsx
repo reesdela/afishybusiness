@@ -1,5 +1,6 @@
-import './Navigation.css'
 import Logo from '../../../assets/fishy.svg'
+import './Navigation.css'
+
 
 const Navigation = () => {
 
