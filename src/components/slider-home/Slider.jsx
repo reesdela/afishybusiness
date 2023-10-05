@@ -8,6 +8,13 @@ const Slider = () => {
 
     useEffect(() => {
         const imgElementsArray = Array.from(document.getElementsByClassName('slider-image'))
+        window.addEventListener('load', () => {
+            const widthContainer = document.getElementById('body_bottom').offsetWidth
+            imgElementsArray.forEach((img) => {
+                img.style.width = `${widthContainer}px`
+            })
+        })
+
         window.addEventListener('resize', () => {
             const widthContainer = document.getElementById('body_bottom').offsetWidth
             imgElementsArray.forEach((img) => {
@@ -17,6 +24,7 @@ const Slider = () => {
     }, [])
 
     return (
+        <div className="testTheFlex">
         <div id="body_bottom_wrapper">
             <div id="body_bottom">
                 <div className="slider-holder">
@@ -41,6 +49,7 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
