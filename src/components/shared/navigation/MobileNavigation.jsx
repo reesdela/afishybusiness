@@ -1,25 +1,33 @@
-import Hamburger from '../../../assets/hamburger.svg'
+import { useState } from 'react'
 import Logo from '../../../assets/fishy.svg'
-import './MobileNavigation.css'
 
 const MobileNavigation = () => {
+    const [drawerStatus, toggleDrawer] = useState(false)
 
-    const openDrawer = () => {
-
+    const displayDrawer = () => {
+        toggleDrawer(!drawerStatus)
+        const hamMenu = document.querySelector('.hamburger-menu')
+        hamMenu.classList.toggle('active');
     }
 
     return (
         <div>
+        <div className="WrapperTest">
             <div className="navHeader">
                 <img id="logoMobile" src={Logo} />
-                <span id="menuToggle" onClick={openDrawer}>
+                <span id="menuToggle" onClick={displayDrawer}>
                     <p id="menu">MENU</p>
-                    <img id="hamburger" src={Hamburger} />
+                    <div className="hamburger-menu">
+                        <div className="ham-bar bar-top" />
+                        <div className="ham-bar bar-middle" />
+                        <div className="ham-bar bar-bottom" />
+                    </div>
                 </span>
             </div>
-            <nav className="nav-main">
+            {drawerStatus &&
+                <nav className="nav-main">
                     <ul className="nav-list-main">
-                        <li className="nav-list-item">
+                        <li className="nav-list-item first-item">
                             <a href="">CERAMIC FISH ART</a>
                         </li>
                         <li className="nav-list-item">
@@ -40,8 +48,16 @@ const MobileNavigation = () => {
                         <li className="nav-list-item">
                             <a href="">CONTACT US</a>
                         </li>
+                        <hr className="line-seperator"></hr>
+                        <li className="nav-list-item">
+                            <a href="">SIGN IN</a>
+                        </li>
+                        <li className="nav-list-item">
+                            <a href="">REGISTER</a>
+                        </li>
                     </ul>
-                </nav>
+                </nav>}
+                </div>
         </div>
     )
 }

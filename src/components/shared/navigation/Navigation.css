@@ -68,16 +68,49 @@
     
     #menu {
         text-align: center;
-        margin-right: 8px;
     }
     
     #logoMobile {
         height: 60px;
     }
-    
-    #hamburger {
-        height: 20px;
-        width: 20px;
+
+    .hamburger-menu {
+        width: 50px;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .ham-bar {
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        background-color: black;
+        border-radius: 25px;
+        margin-bottom: 2px;
+        transform: translate(-20%, -50%);
+        transition: transform .6s, opacity .8s, top .6s;
+    }
+
+    .bar-top {
+        top: 25%;
+    }
+
+    .bar-bottom {
+        top: 75%;
+    }
+
+    .hamburger-menu.active .bar-top {
+        transform: translate(-20%, -50%) rotate(-315deg);
+        top: 50%;
+    }
+
+    .hamburger-menu.active .bar-middle {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar-bottom {
+        transform: translate(-20%, -50%) rotate(315deg);
+        top: 50%;
     }
     
     #menuToggle {
@@ -86,8 +119,38 @@
     }
 
     .nav-main {
+        top: 80px;
+        position: fixed;
         display: flex;
         flex-flow: column;
         z-index: 101;
+        width: 100%;
+        background-color: #002e59;
+    }
+
+    .WrapperTest {
+        height: 80px;
+    }
+
+    .nav-list-main {
+        list-style: none;
+    }
+
+    .nav-list-item {
+        padding-bottom: 15px;
+    }
+
+    .first-item {
+        padding-top: 15px;
+    }
+
+    .line-seperator {
+        margin-bottom: 15px;
+        margin-right: 40px;
+    }
+
+    .nav-list-item a {
+        color: white;
+        text-decoration: none;
     }
 }
