@@ -5,3 +5,11 @@
         flex-flow: column;
     }
 }
+
+@media (max-width: 480px) {
+    #root {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+}

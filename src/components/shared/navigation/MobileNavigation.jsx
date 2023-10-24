@@ -11,7 +11,7 @@ const MobileNavigation = () => {
     }
 
     return (
-        <div>
+        <div className="mobileNavWrapper">
         <div className="WrapperTest">
             <div className="navHeader">
                 <img id="logoMobile" src={Logo} />
