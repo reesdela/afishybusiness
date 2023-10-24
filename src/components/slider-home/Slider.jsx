@@ -1,6 +1,7 @@
 import fishImg1 from '../../assets/fish_img1.jpg'
 import fishImg2 from '../../assets/fish_img2.jpg'
 import fishImg3 from '../../assets/fish_img4.png'
+import Background from '../shared/background'
 import { useEffect } from 'react'
 import './Slider.css'
 
@@ -25,7 +26,7 @@ const Slider = () => {
 
     return (
         <div className="testTheFlex">
-        <div id="body_bottom_wrapper">
+        <Background>
             <div id="body_bottom">
                 <div className="slider-holder">
                     <span id="slider-image-1"></span>
@@ -49,7 +50,7 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Background>
         </div>
     )
 }
