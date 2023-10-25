@@ -15,7 +15,7 @@ const Slider = () => {
                 img.style.width = `${widthContainer}px`
             })
         })
-
+        
         window.addEventListener('resize', () => {
             const widthContainer = document.getElementById('body_bottom').offsetWidth
             imgElementsArray.forEach((img) => {
