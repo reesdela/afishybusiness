@@ -1,0 +1,200 @@
+@media (min-width: 481px) {
+    .body_bottom_header {
+        width: 55%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #create_account {
+        margin: 0 auto;
+        width: 35%;
+        overflow: hidden;
+    }
+
+    .create_account_error {
+        margin: 0 auto;
+        width: 15%;
+    }
+
+    .create_account_error p {
+        color: red;
+    }
+
+    .form_input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        border-color: #ccc;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0;
+        color: #666;
+        display: block;
+        font-family: inherit;
+        font-size: 1rem;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        height: 2.25rem;
+        padding: .75rem 1rem;
+        margin-top: 0.25rem;
+        transition: border-color .1s ease-out;
+        width: 100%
+    }
+
+    .form_label {
+        font-size: 1.15rem;
+    }
+
+    .form_label small {
+        float: right;
+        color: #989898;
+        text-transform: uppercase;
+        font-size: .71429rem;
+        vertical-align: bottom;
+        margin-top: .35714rem;
+    }
+
+    .form_inline_message:before {
+        content: "x";
+        margin-right: .5rem;
+    }
+
+    .form_inline_message {
+        color: red;
+        display: none;
+    }
+
+    .form_field {
+        float: left;
+        width: 50%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    .form_field_left {
+        clear: left;
+    }
+
+    .form_field_right {
+        width: 50%;
+    }
+
+    .form_submit {
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    #create_account_submit {
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        margin-top: 30px;
+        text-decoration: none;
+        border: none;
+        background-color: #c41c22;
+        color: #fff;
+        padding: .65714rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .body_bottom_header {
+        width: 55%;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+
+    #create_account {
+        margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .create_account_error {
+        margin: 0 auto;
+        width: 15%;
+    }
+
+    .create_account_error p {
+        color: red;
+    }
+
+    .form_input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        border-color: #ccc;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0;
+        color: #666;
+        display: block;
+        font-family: inherit;
+        font-size: 1rem;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        height: 2.25rem;
+        padding: .75rem 1rem;
+        margin-top: 0.25rem;
+        transition: border-color .1s ease-out;
+        width: 100%
+    }
+
+    .form_label {
+        font-size: 1.15rem;
+    }
+
+    .form_label small {
+        float: right;
+        color: #989898;
+        text-transform: uppercase;
+        font-size: .71429rem;
+        vertical-align: bottom;
+        margin-top: .35714rem;
+    }
+
+    .form_inline_message:before {
+        content: "x";
+        margin-right: .5rem;
+    }
+
+    .form_inline_message {
+        color: red;
+        display: none;
+    }
+
+    .form_field {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    .form_field_left {
+        clear: left;
+    }
+
+    .form_field_right {
+        width: 100%;
+    }
+
+    .form_submit {
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    #create_account_submit {
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        margin-top: 30px;
+        text-decoration: none;
+        border: none;
+        background-color: #c41c22;
+        color: #fff;
+        padding: .65714rem 2rem;
+    }
+}
