@@ -1,7 +1,10 @@
 import Background from "../shared/background"
+import Input from "../shared/input/Input"
 import './Register.css'
 
 const Register = () => {
+
+
     return (
         <Background>
             <div className="body_bottom_header">
@@ -9,9 +12,12 @@ const Register = () => {
             </div>
             <form id="create_account" encType="multipart/form-data" method="post">
                     <div className="form_field form_field_left" id="email_field">
-                        <label className="form_label" htmlFor="formInput">Email: <small>required</small></label>
-                        <input autoComplete="email" className="form_input" type="text" id="formInputEmail" name="email" />
-                        <span className="form_inline_message" id="email_message">You must enter a valid email.</span>
+                        <Input 
+                            required={true}
+                            labelName='Email:'
+                            type="text"
+                            errorMessage="You must enter a valid email."
+                        />
                     </div>
                     <div className="form_field form_field_right" id="password_field">
                         <label className="form_label" htmlFor="formInput">Password: <small>required</small></label>
