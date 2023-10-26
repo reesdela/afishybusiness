@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="header"
+>
+  <nav
+    className="header-nav"
+  >
+    <ul
+      className="header-user"
+    >
+      <li
+        className="user-item"
+      >
+        <span>
+          <a
+            href="./subpages/login/login.php"
+          >
+            Sign In
+          </a>
+          <a
+            href="/register"
+            onClick={[Function]}
+          >
+            Register
+          </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
