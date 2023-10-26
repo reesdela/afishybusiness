@@ -6,6 +6,7 @@ import Register from './components/register/register'
 import RouterError from './components/shared/error/RouterError'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './main.css'
+import Login from './components/sign-in/Login'
 
 const router = createBrowserRouter([{
   path: '/',
@@ -17,6 +18,9 @@ const router = createBrowserRouter([{
   }, {
     path: 'register',
     element: <Register />
+  }, {
+    path: 'login',
+    element: <Login />
   }]
 }])
 

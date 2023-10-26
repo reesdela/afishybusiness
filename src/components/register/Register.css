@@ -86,7 +86,7 @@
         margin: 0 auto;
     }
 
-    #create_account_submit {
+    #form_button_submit {
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -186,7 +186,7 @@
         margin: 0 auto;
     }
 
-    #create_account_submit {
+    #form_button_submit {
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
