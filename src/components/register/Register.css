@@ -5,12 +5,6 @@
         margin-top: 20px;
     }
 
-    #create_account {
-        margin: 0 auto;
-        width: 35%;
-        overflow: hidden;
-    }
-
     .create_account_error {
         margin: 0 auto;
         width: 15%;
@@ -42,10 +36,6 @@
         width: 100%
     }
 
-    .form_label {
-        font-size: 1.15rem;
-    }
-
     .form_label small {
         float: right;
         color: #989898;
@@ -62,7 +52,6 @@
 
     .form_inline_message {
         color: red;
-        display: none;
     }
 
     .form_field {

@@ -1,0 +1,11 @@
+.button-primary {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    text-decoration: none;
+    border: none;
+    background-color: #c41c22;
+    color: #fff;
+    padding: .65714rem 2rem;
+}
