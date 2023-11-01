@@ -39,7 +39,12 @@ const RegisterForm = (props) => {
         if(errorArry.join('')) {
             console.log('error')
         } else {
-            console.log('no error')
+            const xmlRequest = new XMLHttpRequest();
+            xmlRequest.open('GET', 'http://localhost:8080/afishybusiness-backend/hello')
+            xmlRequest.onload = () => {
+                xmlRequest.status === 200 ? console.log(xmlRequest.response) : console.log('no')
+            }
+            xmlRequest.send()
         }
     }
 
