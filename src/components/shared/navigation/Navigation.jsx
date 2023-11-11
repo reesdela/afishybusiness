@@ -1,7 +1,7 @@
 import Logo from '../../../assets/fishy.svg'
 import './Navigation.css'
 import useMediaQuery from '../hooks/useMediaQuery'
-import MobileNavigation from './mobileNavigation'
+import MobileNavigation from './MobileNavigation'
 
 
 const Navigation = () => {

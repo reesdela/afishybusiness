@@ -10,6 +10,10 @@ import './Register.css'
 const RegisterForm = (props) => {
     const [errors, setErrors] = useState({})
     const [password, setPassword] = useState('')
+    const test = {
+        "username": String('test'),
+        "password": String('testing')
+    }
 
     const handleValidate = (input) => {
         if (input.name === 'password') {
@@ -30,7 +34,7 @@ const RegisterForm = (props) => {
         return temp
     }
 
-    const handleSubmit = (inputs) => {
+    const handleSubmit = async (inputs) => {
         const errorArry = []
         inputs.preventDefault()
         for (let i = 0; i < inputs.target.length - 1; i++) {
@@ -39,12 +43,22 @@ const RegisterForm = (props) => {
         if(errorArry.join('')) {
             console.log('error')
         } else {
-            const xmlRequest = new XMLHttpRequest();
-            xmlRequest.open('GET', 'http://localhost:8080/afishybusiness-backend/hello')
-            xmlRequest.onload = () => {
-                xmlRequest.status === 200 ? console.log(xmlRequest.response) : console.log('no')
-            }
-            xmlRequest.send()
+            const response = await fetch("http://localhost:8080/afishybusiness-backend/account/createaccount", {
+                method: "POST",
+                headers: {
+                    "Content-Type": 'application/json'
+                },
+                body: JSON.stringify(test)
+            }).then(() => {
+                
+            })
+            // const xmlRequest = new XMLHttpRequest();
+            // xmlRequest.open('POST', 'http://localhost:8080/afishybusiness-backend/account/createaccount')
+            // xmlRequest.setRequestHeader('Content-type', 'application/json')
+            // xmlRequest.onload = () => {
+            //     xmlRequest.status === 200 ? console.log(xmlRequest.response) : console.log('no')
+            // }
+            // xmlRequest.send(test)
         }
     }
 

@@ -7,6 +7,8 @@ COPY package.json .
 
 RUN npm install
 
+VOLUME [ "/app/src" ]
+
 COPY . .
 
 EXPOSE 3000
