@@ -10,10 +10,7 @@ import './Register.css'
 const RegisterForm = (props) => {
     const [errors, setErrors] = useState({})
     const [password, setPassword] = useState('')
-    const test = {
-        "username": String('test'),
-        "password": String('testing')
-    }
+    const [email, setEmail] = useState('')
 
     const handleValidate = (input) => {
         if (input.name === 'password') {
@@ -40,25 +37,21 @@ const RegisterForm = (props) => {
         for (let i = 0; i < inputs.target.length - 1; i++) {
             errorArry.push(handleValidate(inputs.target[i]))
         }
-        if(errorArry.join('')) {
-            console.log('error')
-        } else {
+        if(!errorArry.join('')) {
+            const account = {
+                email: email,
+                password: password,
+            }
             const response = await fetch("http://localhost:8080/afishybusiness-backend/account/createaccount", {
                 method: "POST",
                 headers: {
-                    "Content-Type": 'application/json'
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
-                body: JSON.stringify(test)
+                body: JSON.stringify(account)
             }).then(() => {
                 
             })
-            // const xmlRequest = new XMLHttpRequest();
-            // xmlRequest.open('POST', 'http://localhost:8080/afishybusiness-backend/account/createaccount')
-            // xmlRequest.setRequestHeader('Content-type', 'application/json')
-            // xmlRequest.onload = () => {
-            //     xmlRequest.status === 200 ? console.log(xmlRequest.response) : console.log('no')
-            // }
-            // xmlRequest.send(test)
         }
     }
 
@@ -72,6 +65,7 @@ const RegisterForm = (props) => {
             >
                 <Input
                     required={true}
+                    setFunction={setEmail}
                     label="Email"
                     name="email"
                     type="text"
@@ -80,6 +74,7 @@ const RegisterForm = (props) => {
                 />
                 <Input
                     required={true}
+                    setFunction={setPassword}
                     label="Password"
                     name="password"
                     type="password"
