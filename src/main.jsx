@@ -13,7 +13,7 @@ const router = createBrowserRouter([{
   element: <AFishyBusiness />,
   errorElement: <RouterError />,
   children: [{
-    path: 'home',
+    index: true,
     element: <Slider />
   }, {
     path: 'register',

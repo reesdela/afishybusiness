@@ -1,7 +1,8 @@
 export const registerErrors = {
     "register": {
         "email": {
-            "invalidEmail": "You must enter a valid email."
+            "invalidEmail": "You must enter a valid email.",
+            "emailTaken": "An account with that email has already been created."
         },
         "password": {
             "tooShort": "Your password must be at least 8 characters.",

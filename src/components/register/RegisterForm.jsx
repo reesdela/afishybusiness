@@ -6,11 +6,13 @@ import { validateEmail, validatePassword } from "../shared/regex/regex"
 import { registerErrors } from "../shared/error/errorStrings"
 import Background from "../shared/background"
 import './Register.css'
+import { useNavigate } from "react-router-dom"
 
 const RegisterForm = (props) => {
     const [errors, setErrors] = useState({})
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
+    const navigate = useNavigate();
 
     const handleValidate = (input) => {
         if (input.name === 'password') {
@@ -49,9 +51,15 @@ const RegisterForm = (props) => {
                     "Accept": "application/json"
                 },
                 body: JSON.stringify(account)
-            }).then(() => {
-                
             })
+            const data = await response.json()
+            if (!data.status) {
+                if (data.error === 'DuplicateKeyException') {
+                    setErrors({'email': registerErrors.register.email.emailTaken})
+                }
+            } else {
+                navigate("/")
+            }
         }
     }
 
