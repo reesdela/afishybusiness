@@ -3,3 +3,11 @@
     width: 35%;
     overflow: hidden;
 }
+
+@media (max-width: 480px) {
+    .form-primary {
+        margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+    }
+}

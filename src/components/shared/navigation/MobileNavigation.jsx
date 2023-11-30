@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Logo from '../../../assets/fishy.svg'
+import { Link } from 'react-router-dom'
 
 const MobileNavigation = () => {
     const [drawerStatus, toggleDrawer] = useState(false)
@@ -50,10 +51,10 @@ const MobileNavigation = () => {
                         </li>
                         <hr className="line-seperator"></hr>
                         <li className="nav-list-item">
-                            <a href="">SIGN IN</a>
+                            <a><Link to={'login'}>SIGN IN</Link></a>
                         </li>
                         <li className="nav-list-item">
-                            <a href="">REGISTER</a>
+                            <a><Link to={'register'}>REGISTER</Link></a>
                         </li>
                     </ul>
                 </nav>}
