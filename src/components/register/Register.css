@@ -5,12 +5,12 @@
         margin-top: 20px;
     }
 
-    .create_account_error {
+    .general_account_error {
         margin: 0 auto;
         width: 15%;
     }
 
-    .create_account_error p {
+    .general_account_error p {
         color: red;
     }
 
@@ -152,7 +152,6 @@
 
     .form_inline_message {
         color: red;
-        display: none;
     }
 
     .form_field {

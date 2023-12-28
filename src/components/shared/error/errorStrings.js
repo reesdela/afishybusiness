@@ -1,4 +1,4 @@
-export const registerErrors = {
+export const accountErrors = {
     "register": {
         "email": {
             "invalidEmail": "You must enter a valid email.",
@@ -12,5 +12,9 @@ export const registerErrors = {
         "confirmPassword": {
             "noMatch": "Your passwords do not match."
         }
-    }
+    },
+    "login": {
+        "invalidCredetials": "Email or Password is invalid."
+    },
+    "general": "Something has gone wrong on our end. For more information please contact Customer Service."
 }

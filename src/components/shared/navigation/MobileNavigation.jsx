@@ -51,10 +51,10 @@ const MobileNavigation = () => {
                         </li>
                         <hr className="line-seperator"></hr>
                         <li className="nav-list-item">
-                            <a><Link to={'login'}>SIGN IN</Link></a>
+                            <Link to={'login'}>SIGN IN</Link>
                         </li>
                         <li className="nav-list-item">
-                            <a><Link to={'register'}>REGISTER</Link></a>
+                            <Link to={'register'}>REGISTER</Link>
                         </li>
                     </ul>
                 </nav>}

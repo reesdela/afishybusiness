@@ -3,7 +3,7 @@ import Input from "../shared/input/Input"
 import Button from "../shared/buttons/Button"
 import { useState } from "react"
 import { validateEmail, validatePassword } from "../shared/regex/regex"
-import { registerErrors } from "../shared/error/errorStrings"
+import { accountErrors } from "../shared/error/errorStrings"
 import Background from "../shared/background"
 import './Register.css'
 import { useNavigate } from "react-router-dom"
@@ -24,7 +24,7 @@ const RegisterForm = (props) => {
                 break;
             case 'password': temp = validatePassword(input)
                 break;
-            case 'confirmPassword': (input.value !== password) ? temp = registerErrors.register.confirmPassword.noMatch : temp = ''
+            case 'confirmPassword': (input.value !== password) ? temp = accountErrors.register.confirmPassword.noMatch : temp = ''
                 break;
         }
         setErrors((prevVal) => {
@@ -55,7 +55,7 @@ const RegisterForm = (props) => {
             const data = await response.json()
             if (!data.status) {
                 if (data.error === 'DuplicateKeyException') {
-                    setErrors({'email': registerErrors.register.email.emailTaken})
+                    setErrors({'email': accountErrors.register.email.emailTaken})
                 }
             } else {
                 navigate("/")
