@@ -42,23 +42,21 @@ const RegisterForm = (props) => {
         if(!errorArry.join('')) {
             const account = {
                 email: email,
-                password: password,
+                password: password
             }
-            const response = await fetch("http://localhost:8080/afishybusiness-backend/account/createaccount", {
+            const response = await fetch("http://localhost:8080/user/createUser", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
                 },
                 body: JSON.stringify(account)
             })
             const data = await response.json()
-            if (!data.status) {
-                if (data.error === 'DuplicateKeyException') {
-                    setErrors({'email': accountErrors.register.email.emailTaken})
-                }
+            console.log(data);
+            if (data.internalCode !== 'USER-7') {
+                setErrors({'email': accountErrors.register.email.emailTaken})
             } else {
-                navigate("/")
+                console.log(`yo ${data}`)
             }
         }
     }
