@@ -45,8 +45,10 @@ const Login = () => {
             }
             const response = await fetch("http://localhost:8080/user/authenticate", {
                 method: "POST",
+                credentials: 'include',
                 headers: {
                     "Content-Type": "application/json",
+                    "X-XSRF-TOKEN": Cookies.get('XSRF-TOKEN')
                 },
                 body: JSON.stringify(account)
             })
@@ -60,7 +62,6 @@ const Login = () => {
                 }
             } else {
                 console.log('success!')
-                Cookies.set('UserInfo', email)
                 navigate("/")
             }
         }
