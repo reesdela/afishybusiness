@@ -1,6 +1,7 @@
 import Form from "../shared/form/Form"
 import Input from "../shared/input/Input"
 import Button from "../shared/buttons/Button"
+import Cookies from "js-cookie"
 import { useState } from "react"
 import { validateEmail, validatePassword } from "../shared/regex/regex"
 import { accountErrors } from "../shared/error/errorStrings"
@@ -46,8 +47,10 @@ const RegisterForm = (props) => {
             }
             const response = await fetch("http://localhost:8080/user/createUser", {
                 method: "POST",
+                credentials: 'include',
                 headers: {
                     "Content-Type": "application/json",
+                    "X-XSRF-TOKEN": Cookies.get('XSRF-TOKEN')
                 },
                 body: JSON.stringify(account)
             })
@@ -56,7 +59,7 @@ const RegisterForm = (props) => {
             if (data.internalCode !== 'USER-7') {
                 setErrors({'email': accountErrors.register.email.emailTaken})
             } else {
-                console.log(`yo ${data}`)
+                console.log(data)
             }
         }
     }
